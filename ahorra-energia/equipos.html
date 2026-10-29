@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- DOCTYPE: le dice al navegador que este documento es HTML5 -->
+<html lang="es">
+<!-- html: la etiqueta raiz; lang="es" indica que el contenido esta en espanol -->
+<head>
+    <!-- head: informacion SOBRE la pagina (no se ve en la ventana) -->
+    <meta charset="UTF-8">
+    <!-- charset UTF-8: permite tildes, enie y simbolos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport: la pagina se adapta al ancho del celular -->
+    <title>Equipos electricos de mi casa</title>
+    <!-- title: el texto que aparece en la pestana del navegador -->
+    <!-- Bootstrap: una hoja de estilos YA HECHA que se carga desde internet (CDN).
+         Con solo poner sus "clases" en las etiquetas, la pagina se ve ordenada. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body class="container py-3">
+    <!-- class="container": Bootstrap centra el contenido; py-3 = espacio arriba y abajo -->
+    <!-- p-4 = relleno; mb-4 = margen abajo; bg-primary text-white = fondo azul y letra blanca; rounded = esquinas redondas -->
+    <header class="p-4 mb-4 bg-primary text-white rounded">
+        <h1>Equipos electricos de mi casa</h1>
+        <p>Consumo de una semana en la casa de ejemplo. Tarifa: 926,81 COP por kWh.</p>
+        <!-- nav: el MENU de navegacion entre las paginas del sitio -->
+        <!-- nav nav-pills: menu con botones redondeados; cada enlace lleva class="nav-link" -->
+        <nav class="nav nav-pills">
+            <!-- a href: un ENLACE; aqui apunta a otro archivo del mismo sitio -->
+            <a class="nav-link text-white" href="index.html">Inicio</a>
+            <a class="nav-link text-white" href="equipos.html">Equipos de mi casa</a>
+            <a class="nav-link text-white" href="registro.html">Registrar un equipo</a>
+            <a class="nav-link text-white" href="mi-factura.html">Mi factura</a>
+            <a class="nav-link text-white" href="encuesta.html">Encuesta</a>
+        </nav>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Consumo por equipo</h2>
+            <!-- table table-striped table-bordered: filas de colores alternos y bordes -->
+            <table class="table table-striped table-bordered">
+                <caption>Consumo semanal de los equipos</caption>
+                <thead>
+                    <tr>
+                        <!-- rowspan="2": la celda ocupa 2 FILAS hacia abajo -->
+                        <th rowspan="2">Equipo</th>
+                        <th rowspan="2">Potencia (W)</th>
+                        <!-- colspan="2": la celda ocupa 2 COLUMNAS hacia la derecha -->
+                        <th colspan="2">Horas de uso por día</th>
+                        <th rowspan="2">kWh en la semana</th>
+                        <th rowspan="2">Costo en la semana (COP)</th>
+                    </tr>
+                    <tr>
+                        <th>Lunes a viernes</th>
+                        <th>Sábado y domingo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Freidora de aire</td><td>1700</td><td>3 (promedio) </td><td>1 (promedio)</td><td>6,8</td><td>6.302</td></tr>
+                    <tr><td>Licuadora</td><td>600</td><td>1,5 (promedio)</td><td>0.25 (promedio)</td><td>1,05</td><td>974</td></tr>
+                    <tr><td>Olla multiusos</td><td>1000</td><td>3 (promedio) </td><td>2 (promedio)</td><td>5</td><td>4.634</td></tr>
+                    <tr><td>Televisor</td><td>120</td><td>60 (promedio)</td><td>24 (promedio)</td><td>10,08</td><td>9.342</td></tr>
+                </tbody>
+                <!-- tfoot: la fila de TOTALES al final de la tabla -->
+                <tfoot>
+                    <tr>
+                        <th colspan="4">Total de la semana</th>
+                        <td>22,93</td>
+                        <td>21,252</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section>
+            <h2>¿Qué equipo gasta más?</h2>
+            <p>La <strong>El televisor</strong>: se usa durante 12 horas aproximadamente todos los días, lo que incrementa <em>en un alto porcentaje</em> la energía de la casa durante una semana.</p>
+            <!-- figure + figcaption: una imagen con su PIE DE FOTO -->
+            <figure>
+                <img class="img-fluid" src="img\Televisor LG.jpeg" alt="Televisor LG" width="200">
+                <img class="img-fluid" src="img\Licuadora Oster.png" alt="Licuadora Oster" width="300">
+                <img class="img-fluid" src="img\Olla Multiusos Oster.jpeg" alt="Olla Multiusos Oster" width="200">
+                <img class="img-fluid" src="img/Freidora de aire Oster.jpeg" alt="Freidora de aire Oster" width="200">
+
+                <figcaption><strong>Cada kWh que consume el televisor<strong></strong> se pagó más costoso desde el mes de abril de 2026.
+                 pero el mes que tuvo un consumo mas alto fue agosto de 2026.</figcaption>
+                <img class="img-fluid" src="img\Costo_Energia_Mes.png" alt="Televisor LG" width="500"> 
+            </figure>
+        </section>
+    </main>
+
+    <!-- text-muted = letra gris; mt-4 = margen arriba -->
+    <footer class="mt-4 text-muted">
+        <p>Ingeniería Web I · IU Digital de Antioquia · 2026-2</p>
+    </footer>
+</body>
+</html>
+
